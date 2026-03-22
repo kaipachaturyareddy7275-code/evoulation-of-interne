@@ -1,0 +1,80 @@
+:root {
+  --bg: #050505;
+  --text: #ffffff;
+}
+
+body {
+  margin: 0;
+  overflow-x: hidden;
+  background-color: var(--bg);
+  color: var(--text);
+  font-family: "Inter", sans-serif;
+}
+
+.container {
+  display: flex;
+  width: 500vw; /* 5 sections * 100vw */
+  height: 100vh;
+}
+
+.panel {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  background: radial-gradient(circle at center, #111 0%, #050505 100%);
+}
+
+.content-card {
+  background: rgba(255, 255, 255, 0.03);
+  padding: 4rem;
+  border-radius: 24px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(15px);
+  max-width: 500px;
+  text-align: center;
+  transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+/* INTERACTIVE ELEMENT 1: Card Hover */
+.content-card:hover {
+  transform: scale(1.05);
+  border-color: var(--accent);
+  box-shadow: 0 0 30px var(--accent);
+}
+
+.era-year {
+  color: var(--accent);
+  font-weight: 800;
+  letter-spacing: 4px;
+  font-size: 1.2rem;
+}
+
+h1 {
+  font-size: 3.5rem;
+  margin: 1rem 0;
+}
+
+.icon-wrapper {
+  color: var(--accent);
+  margin-bottom: 1rem;
+}
+
+/* INTERACTIVE ELEMENT 2: Magnetic Button Style */
+.interactive-btn {
+  margin-top: 2rem;
+  padding: 12px 24px;
+  border: 1px solid var(--accent);
+  color: var(--accent);
+  border-radius: 50px;
+  cursor: pointer;
+  display: inline-block;
+  transition: 0.3s;
+}
+
+.interactive-btn:hover {
+  background: var(--accent);
+  color: #000;
+}
